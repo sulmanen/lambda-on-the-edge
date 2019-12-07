@@ -1,0 +1,28 @@
+{
+  "name": "lambda-on-the-edge",
+  "version": "0.0.1",
+  "description": "Lambda@Edge @types",
+  "main": "index.js",
+  "scripts": {
+    "typedoc": "typedoc --out docs src",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulmanen/lambda-on-the-edge.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda@edge",
+    "typescript"
+  ],
+  "author": "Samuli Ulmanen <s.ulmanen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sulmanen/lambda-on-the-edge/issues"
+  },
+  "homepage": "https://github.com/sulmanen/lambda-on-the-edge#readme",
+  "devDependencies": {
+    "typedoc": "^0.15.3"
+  }
+}
