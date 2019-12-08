@@ -4,6 +4,7 @@
   "description": "Lambda@Edge @types",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc --noEmit",
     "typedoc": "typedoc --out docs src",
     "test": "npm test"
   },
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/sulmanen/lambda-on-the-edge#readme",
   "devDependencies": {
-    "typedoc": "^0.15.3"
+    "typedoc": "^0.15.3",
+    "typescript": "^3.7.3"
   }
 }
