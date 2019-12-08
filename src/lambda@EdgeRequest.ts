@@ -1,4 +1,4 @@
-import { LambdaRecord } from './lambda@Edge';
+import { LambdaRecord, Header } from './lambda@Edge';
 
 
 interface CloudFrontRequestBody {
@@ -45,11 +45,6 @@ interface StandardHTTPRequestHeaders {
   warning: Header[];
 }
 
-interface Header {
-  key: string;
-  value: string;
-};
-
 type RequestHeaders = keyof StandardHTTPRequestHeaders | string;
 
 interface CustomOrigin {
@@ -79,7 +74,7 @@ interface RequestOrigin {
 
 type HTTPMethod = 'GET' | 'POST' | 'DELETE' | 'OPTIONS' | 'HEAD';
 
-interface CloudFrontRequest {
+export interface CloudFrontRequest {
   body: CloudFrontRequestBody;
   clientIp: string;
   querystring: string;
