@@ -45,7 +45,7 @@ interface StandardHTTPRequestHeaders {
   warning: Header[];
 }
 
-type RequestHeaders = keyof StandardHTTPRequestHeaders | string;
+type RequestHeaders = StandardHTTPRequestHeaders & { string: Header[] };
 
 interface CustomOrigin {
   customHeaders: RequestHeaders;
