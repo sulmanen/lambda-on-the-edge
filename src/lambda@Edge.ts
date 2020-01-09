@@ -3,7 +3,7 @@ import { CloudFrontResponse } from './lambda@EdgeResponse';
 
 type StringifyCompatible = string | object | number;
 
-export type LambdaCallback = (e: Error, response: StringifyCompatible) => void;
+export type LambdaCallback = (e: Error | null, response: StringifyCompatible) => void;
 
 export interface AmazonCognitoIdentity {
   cognitoIdentityId: string;
@@ -31,23 +31,25 @@ export interface ClientContext {
   env: Environment;
 }
 
+export type MemoryLimitInMB = '128' | '3008';
+
 // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-context.html
 export interface LambdaContext {
   getRemainingTimeInMillis: () => number;
   functionName: string;
   functionVersion: string;
   invokedFunctionArn: string;
-  memoryLimitInMB: string;
+  memoryLimitInMB: MemoryLimitInMB;
   awsRequestId: string;
   logGroupName: string;
   logStreamName: string;
   identity?: AmazonCognitoIdentity;
-  clientContext: ClientContext;
+  clientContext?: ClientContext;
   callbackWaitsForEmptyEventLoop: boolean;
 }
 
 export interface Event {
-  Record: LambdaRecord[];
+  Records: LambdaRecord[];
 }
 
 export interface LambdaRecord {

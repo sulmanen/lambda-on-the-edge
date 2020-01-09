@@ -5,9 +5,11 @@ export interface LambdaAtEdgeResponse {
 }
 
 export interface CloudFrontResponse {
+  bodyEncoding?: 'text' | 'base64';
+  body?: string;
   status: number;
-  statusDescription: string;
-  headers: StandardHTTPResponseHeaders;
+  statusDescription?: string;
+  headers?: StandardHTTPResponseHeaders;
 }
 
 interface StandardHTTPResponseHeaders {

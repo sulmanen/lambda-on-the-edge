@@ -1,10 +1,18 @@
 import {
   Event,
   LambdaContext,
-  LambdaCallback
+  LambdaCallback,
 } from './lambda@Edge';
 
-// split users into a/b groups for test color
+import { CloudFrontResponse } from './lambda@EdgeResponse';
+
+/*
+  Incoming user id. Divide users into two groups by hashing user id and setting a new cookie.
+*/
 export const handler = (event: Event, context: LambdaContext, callback: LambdaCallback) => {
-  event.Record[0].cf.request.headers.push({'x-random': {key: 'X-Random', value: Math.round(Math.random())}});
+  const response: CloudFrontResponse = {
+    status: 200
+  };
+
+  callback(null, response);
 };
