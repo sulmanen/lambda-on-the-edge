@@ -56,10 +56,12 @@ export interface LambdaRecord {
   cf: CloudFrontRecord;
 }
 
+export type LambdaAtEdgeEventType = 'viewer-request' | 'origin-request' | 'viewer-response' | 'origin-response'
+
 export interface CloudFrontRecordConfig {
   distributionDomainName: string;
   distributionId: string;
-  eventType: 'viewer-request' | 'origin-request' | 'viewer-response' | 'origin-response';
+  eventType: LambdaAtEdgeEventType;
   requestId: string;
 }
 

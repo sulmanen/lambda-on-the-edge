@@ -9,43 +9,43 @@ interface CloudFrontRequestBody {
 }
 
 interface StandardHTTPRequestHeaders {
-  accept: Header[];
-  'accept-charset': Header[];
-  'accept-encoding': Header[];
-  'accept-language': Header[];
-  'accept-datetime': Header[];
-  'access-control-request-method': Header[];
-  'access-control-request-headers': Header[];
-  authorization: Header[];
-  'cache-control': Header[];
-  connection: Header[];
-  'content-length': Header[];
-  'content-type': Header[];
-  cookie: Header[];
-  date: Header[];
-  expect: Header[];
-  forwarded: Header[];
-  from: Header[];
-  host: Header[];
-  'if-match': Header[];
-  'if-modified-since': Header[];
-  'if-none-match': Header[];
-  'if-range': Header[];
-  'if-unmodified-since': Header[];
-  'max-forwards': Header[];
-  origin: Header[];
-  pragma: Header[];
-  'proxy-authorization': Header[];
-  range: Header[];
-  referer: Header[];
-  TE: Header[];
-  'user-agent': Header[];
-  upgrade: Header[];
-  via: Header[];
-  warning: Header[];
+  accept?:Header[];
+  'accept-charset'?:Header[];
+  'accept-encoding'?:Header[];
+  'accept-language'?:Header[];
+  'accept-datetime'?:Header[];
+  'access-control-request-method'?:Header[];
+  'access-control-request-headers'?:Header[];
+  authorization?:Header[];
+  'cache-control'?:Header[];
+  connection?:Header[];
+  'content-length'?:Header[];
+  'content-type'?:Header[];
+  cookie?:Header[];
+  date?:Header[];
+  expect?:Header[];
+  forwarded?:Header[];
+  from?:Header[];
+  host?:Header[];
+  'if-match'?:Header[];
+  'if-modified-since'?:Header[];
+  'if-none-match'?:Header[];
+  'if-range'?:Header[];
+  'if-unmodified-since'?:Header[];
+  'max-forwards'?:Header[];
+  origin?: Header[];
+  pragma?: Header[];
+  'proxy-authorization'?: Header[];
+  range?: Header[];
+  referer?: Header[];
+  TE?: Header[];
+  'user-agent'?: Header[];
+  upgrade?:Header[];
+  via?:Header[];
+  warning?:Header[];
 }
 
-type RequestHeaders = StandardHTTPRequestHeaders & { string: Header[] };
+type RequestHeaders = StandardHTTPRequestHeaders | { string: Header[] };
 
 interface CustomOrigin {
   customHeaders: RequestHeaders;
