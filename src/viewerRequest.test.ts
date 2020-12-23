@@ -8,8 +8,8 @@ import { CloudFrontResponse } from './lambda@EdgeResponse';
 const e: Event = event as Event;
 
 test('handler', done => {
-    expect(handler(e, lambdaContextFake('MyViewerRequest', '128', true), (e: Error | null, response: CloudFrontResponse) => {
+    handler(e, lambdaContextFake('MyViewerRequest', '128', true), (e: Error | null, response: CloudFrontResponse) => {
         expect(response.status).toEqual(200);
         done();
-    }));
+    });
 });
