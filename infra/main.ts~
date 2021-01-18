@@ -1,0 +1,5 @@
+provider "aws" {
+  profile = "sulmanen"
+  version = "~> 2.0"
+  region = "eu-west-1"
+}

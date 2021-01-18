@@ -1,15 +1,17 @@
 
 import { Event } from './lambda@Edge';
 import { handler } from './viewerRequest';
-import { lambdaContextFake } from './lambdaContext.fake';
 import event from './request.json';
-import { CloudFrontResponse } from './lambda@EdgeResponse';
+import { CloudFrontRequest } from './lambda@EdgeRequest';
 
 const e: Event = event as Event;
 
 test('handler', done => {
-    handler(e, lambdaContextFake('MyViewerRequest', '128', true), (e: Error | null, response: CloudFrontResponse) => {
-        expect(response.status).toEqual(200);
+    handler(e, null, (e: Error | null, request: CloudFrontRequest) => {
+        const abHeader = request.headers['X-AB'];
+
+        expect(abHeader).toBeDefined();
+        expect(abHeader).toBe(0);
         done();
     });
 });

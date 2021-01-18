@@ -1,9 +1,9 @@
 import { CloudFrontRequest } from './lambda@EdgeRequest';
 import { CloudFrontResponse } from './lambda@EdgeResponse';
 
-type StringifyCompatible = string | object | number;
+export type LambdaResponseCallback = (e: Error | null, response: CloudFrontResponse) => void;
 
-export type LambdaCallback = (e: Error | null, response: StringifyCompatible) => void;
+export type LambdaRequestCallback = (e: Error | null, response: CloudFrontRequest) => void;
 
 export interface AmazonCognitoIdentity {
   cognitoIdentityId: string;

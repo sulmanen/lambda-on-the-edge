@@ -20,6 +20,12 @@
           "uri": "/picture.jpg",
           "method": "GET",
           "headers": {
+            "cookie": [
+              {
+                "key": "Cookie",
+                "value": "userId=D7AC549454410808E42E77F5B802C4C4EE377C51154421F5638038AFC4C28310; tracker=E5DEBE02027D3C7B8E361D193877A51F46767E5F7B68A9C3CC46925F3391338C;"
+              }
+            ],
             "host": [
               {
                 "key": "Host",

@@ -82,8 +82,26 @@ I wrote some Lambda@Edge code which got thrown away and now I can tell you this 
 - origin-response
 
 
-
-
 # Things to remember
+- 100 % code coverage will save you time, as cloudfront deploy makes iteration slow
 - origin responses can only mutate headers, not the url or the body of the request
 - just because your test works, don't assume lamba@edge runs the way your test does
+
+# Excercises
+Implement a simple trigger each.
+
+## Prerequisites
+AWS Account
+codesandbox.io access
+
+## viewer-response
+- modify response and don't cache
+
+## viewer-request
+- Normalize cache key
+
+## origin-request
+- remap urls
+
+## origin-response
+- modify server response before it's cached
