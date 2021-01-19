@@ -56,7 +56,7 @@ interface CustomOrigin {
   protocol: "https" | "http";
   readTimeout: number;
   sslProtocols: string[];
-};
+}
 
 interface S3Origin {
   authMethod: string;

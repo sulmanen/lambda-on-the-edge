@@ -48,7 +48,7 @@ interface StandardHTTPRequestHeaders {
 interface Header {
   key: string;
   value: string;
-};
+}
 
 type RequestHeaders = keyof StandardHTTPRequestHeaders | string;
 
@@ -61,7 +61,7 @@ interface CustomOrigin {
   protocol: "https" | "http";
   readTimeout: number;
   sslProtocols: string[];
-};
+}
 
 interface S3Origin {
   authMethod: string;

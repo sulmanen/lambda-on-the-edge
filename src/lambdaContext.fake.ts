@@ -1,7 +1,7 @@
 import { LambdaContext, MemoryLimitInMB } from './lambda@Edge';
 
 export const lambdaContextFake = (
-    functionName: string = 'test',
+    functionName = 'test',
     memoryLimitInMB: MemoryLimitInMB,
     callbackWaitsForEmptyEventLoop: boolean
 ): LambdaContext => ({
