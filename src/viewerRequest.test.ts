@@ -14,7 +14,7 @@ test('handler with cookie', done => {
 
         expect(userId).toBeDefined()
         expect(abHeader).toBeDefined();
-        expect(abHeader[0].value).toBe(0);
+        expect(abHeader[0].value).toBe('0');
         done();
     });
 });
@@ -27,7 +27,7 @@ test('handler no cookie', done => {
 
         expect(request.headers.cookie).not.toBeDefined()
         expect(abHeader).toBeDefined();
-        expect(abHeader[0].value === 1 || abHeader[0].value === 0).toBe(true);
+        expect(abHeader[0].value === '1' || abHeader[0].value === '0').toBe(true);
         done();
     });
 });

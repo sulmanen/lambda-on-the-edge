@@ -9,7 +9,7 @@ export interface CloudFrontResponse {
   body?: string;
   status: number;
   statusDescription?: string;
-  headers?: StandardHTTPResponseHeaders;
+  headers?: StandardHTTPResponseHeaders | unknown;
 }
 
 interface StandardHTTPResponseHeaders {
