@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "tsc:noemit": "tsc --noEmit",
     "typedoc": "typedoc --out docs src",
-    "test": "jest src/*.ts",
+    "test": "jest src/*.ts --coverage",
     "zip": "cd dist && bestzip ../lambda_payload.zip *",
     "lint": "eslint 'src/**/*.{js,ts}' --quiet --fix"
   },
@@ -41,5 +41,19 @@
     "ts-jest": "^24.3.0",
     "typedoc": "^0.20.16",
     "typescript": "^4.1.3"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
+    "coverageThreshold": {
+      "./src": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }

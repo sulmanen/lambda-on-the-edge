@@ -4,7 +4,7 @@ import {
     LambdaRequestCallback
   } from './lambda@Edge';
 
-  export const handler = (event: Event, context: LambdaContext, callback: LambdaRequestCallback) => {
+  export const handler = (event: Event, context: LambdaContext | null, callback: LambdaRequestCallback) => {
     const { request } = event.Records[0].cf;
     const abHeader = request.headers['X-AB'] || request.headers['x-ab'];
     if (abHeader) {
