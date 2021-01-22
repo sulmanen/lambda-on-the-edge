@@ -1,7 +1,7 @@
 
 import { Event } from './lambda@Edge';
 import { handler } from './originRequest';
-import event from './request.json';
+import event from '../fakes/request.json';
 import { CloudFrontRequest } from './lambda@EdgeRequest';
 
 const e: Event = event as Event;

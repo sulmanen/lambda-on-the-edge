@@ -1,7 +1,7 @@
 
 import { Event } from './lambda@Edge';
 import { handler } from './viewerRequest';
-import event from './request.json';
+import event from '../fakes/request.json';
 import { CloudFrontRequest } from './lambda@EdgeRequest';
 import { getCookie } from './getCookie';
 

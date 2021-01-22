@@ -1,4 +1,4 @@
-import { LambdaContext, MemoryLimitInMB } from './lambda@Edge';
+import { LambdaContext, MemoryLimitInMB } from '../src/lambda@Edge';
 
 export const lambdaContextFake = (
     functionName = 'test',

@@ -75,11 +75,11 @@ interface RequestOrigin {
 type HTTPMethod = 'GET' | 'POST' | 'DELETE' | 'OPTIONS' | 'HEAD';
 
 export interface CloudFrontRequest {
-  body: CloudFrontRequestBody;
+  body?: CloudFrontRequestBody;
   clientIp: string;
   querystring: string;
   uri: string;
   method: HTTPMethod;
   headers: RequestHeaders | any;
-  origin: RequestOrigin;
+  origin?: RequestOrigin;
 }
