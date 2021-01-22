@@ -4,13 +4,13 @@ Run transpiled typescript on AWS Lambda@Edge. Go through setting up:
 - origin request
 - origin response
 - viewer response
-
 triggers with typescript and terraform with a codesandbox.io origin.
 
 # Prerequisites
 - AWS account
 - `brew install terraform` Terraform v0.14.4
 - `.aws/credentials` contains aws accesskeys
+- [change AWS profile for terraform](https://github.com/sulmanen/lambda-on-the-edge/blob/master/infra/main.tf#L2)
 - `cd infra && terraform plan` OK
 - `nvm use && npm install && npm run tsc` OK
 - [Fork codesandbox.io sandbox](https://codesandbox.io/s/hidden-surf-n0y6g)
