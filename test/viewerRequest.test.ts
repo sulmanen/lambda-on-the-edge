@@ -1,9 +1,9 @@
 
-import { Event } from './lambda@Edge';
-import { handler } from './viewerRequest';
-import event from '../fakes/request.json';
-import { CloudFrontRequest } from './lambda@EdgeRequest';
-import { getCookie } from './getCookie';
+import { Event } from '../src/lambda@Edge';
+import { handler } from '../src/viewerRequest';
+import event from './fakes/request.json';
+import { CloudFrontRequest } from '../src/lambda@EdgeRequest';
+import { getCookie } from '../src/getCookie';
 
 const e: Event = event as Event;
 

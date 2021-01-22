@@ -1,8 +1,8 @@
 
-import { Event } from './lambda@Edge';
-import { handler } from './originRequest';
-import event from '../fakes/request.json';
-import { CloudFrontRequest } from './lambda@EdgeRequest';
+import { Event } from '../src/lambda@Edge';
+import { handler } from '../src/originRequest';
+import event from './fakes/request.json';
+import { CloudFrontRequest } from '../src/lambda@EdgeRequest';
 
 const e: Event = event as Event;
 

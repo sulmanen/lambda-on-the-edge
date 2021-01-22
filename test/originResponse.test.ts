@@ -1,8 +1,8 @@
 
-import { Event } from './lambda@Edge';
-import { handler } from './originResponse';
-import event from '../fakes/response.json';
-import { CloudFrontResponse } from './lambda@EdgeResponse';
+import { Event } from '../src/lambda@Edge';
+import { handler } from '../src/originResponse';
+import event from './fakes/response.json';
+import { CloudFrontResponse } from '../src/lambda@EdgeResponse';
 
 
 test('handle response status 404 as 302', done => {

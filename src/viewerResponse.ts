@@ -4,6 +4,10 @@ import {
     LambdaResponseCallback
 } from './lambda@Edge';
 
-export const handler = (event: Event, context: LambdaContext, callback: LambdaResponseCallback) => {
-  event.Records[0].cf.request.headers['x-random'] = [{key: 'X-Random', value: Math.round(Math.random()) }];
+export const handler = (event: Event, context: LambdaContext | null, callback: LambdaResponseCallback) => {
+  const { response } = event.Records[0].cf;
+  if (response) {
+    response.headers['x-look-ma-random-number'] = [{ key: 'x-look-ma-random-number', value: Math.round(Math.random()).toString() }];
+    callback(null, response);
+  }
 };
