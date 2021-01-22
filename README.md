@@ -1,9 +1,10 @@
 # Typescript@Edge
-Run transpiled typescript on AWS Lambda@Edge. Got through setting up one of each type of trigger with typescript and terraform:
+Run transpiled typescript on AWS Lambda@Edge. Go through setting up:
 - viewer request
 - origin request
 - origin response
 - viewer response
+triggers with typescript and terraform with a codesandbox.io origin.
 
 # Prerequisites
 - AWS account
