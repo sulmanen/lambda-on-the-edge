@@ -114,10 +114,7 @@ resource "aws_cloudfront_distribution" "viewer-request" {
       query_string = false
       headers      = ["X-AB"]
       cookies {
-        forward = "whitelist"
-         whitelisted_names = [
-          "userId"
-        ]
+        forward = "none"
       }
     }
 
