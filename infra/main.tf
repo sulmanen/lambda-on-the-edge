@@ -114,10 +114,7 @@ resource "aws_cloudfront_distribution" "viewer-request" {
       query_string = false
       headers      = ["X-AB"]
       cookies {
-        forward = "whitelist"
-         whitelisted_names = [
-          "userId"
-        ]
+        forward = "none"
       }
     }
 
@@ -138,7 +135,7 @@ resource "aws_cloudfront_distribution" "viewer-request" {
 
     lambda_function_association {
       event_type = "viewer-response"
-      lambda_arn = aws_lambda_function.origin_response_lambda.qualified_arn
+      lambda_arn = aws_lambda_function.viewer_response_lambda.qualified_arn
     }
 
     viewer_protocol_policy = "allow-all"
