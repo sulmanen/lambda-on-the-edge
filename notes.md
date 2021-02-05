@@ -109,3 +109,6 @@ codesandbox.io access
 
 ## aws-lambda-power-tuning
 (power tuning)[https://github.com/alexcasalboni/aws-lambda-power-tuning]
+
+## aws lambda at edge server render
+https://aws.amazon.com/blogs/compute/building-server-side-rendering-for-react-in-aws-lambda/
